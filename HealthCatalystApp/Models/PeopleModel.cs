@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace HealthCatalystApp.Models
 {
@@ -8,7 +9,7 @@ namespace HealthCatalystApp.Models
         /// Person model holds information about people including:
         /// first name, last name, address, city, state, zip
         /// </summary>
-        public class Person
+        public class People
         {
             [Key]
             public int person_id { get; set; }
