@@ -5,7 +5,7 @@ using System.Web;
 using HealthCatalystApp.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using static HealthCatalystApp.Models.PeopleModel;
+using static HealthCatalystApp.Models.PeopleModels;
 
 namespace HealthCatalystApp.DAL
 {

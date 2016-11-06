@@ -6,7 +6,7 @@ using HealthCatalystApp.Models;
 using System.IO;
 using System.Reflection;
 using System.Data.Entity;
-using static HealthCatalystApp.Models.PeopleModel;
+using static HealthCatalystApp.Models.PeopleModels;
 
 namespace HealthCatalystApp.DAL
 {

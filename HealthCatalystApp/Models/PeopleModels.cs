@@ -3,10 +3,10 @@ using System.Data.Entity;
 
 namespace HealthCatalystApp.Models
 {
-    public class PeopleModel
+    public class PeopleModels
     {
         /// <summary>
-        /// Person model holds information about people including:
+        /// Models information about people including:
         /// first name, last name, address, city, state, zip
         /// </summary>
         public class People
@@ -53,6 +53,27 @@ namespace HealthCatalystApp.Models
             [Display(Name = "Website")]
             [DataType(DataType.Url)]
             public string website { get; set; }
+
+            public virtual Photos photo { get; set; }
+        }
+
+        /// <summary>
+        /// Models information about people including:
+        /// 
+        /// </summary>
+        public class Photos
+        {
+            [Key]
+            public int photoId { get; set; }
+
+            [Required(ErrorMessage = "Your must provide a File")]
+            [Display(Name = "Photo File")]
+            public string file_path { get; set; }
+
+            [Display(Name = "Photo Description")]
+            public string description { get; set; }
+
+            public virtual People people { get; set; }
         }
     }
 }
