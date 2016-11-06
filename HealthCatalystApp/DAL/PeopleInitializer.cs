@@ -20,7 +20,7 @@ namespace HealthCatalystApp.DAL
             //Add people to the people list.  This information comes form
             //dumby data source from online.  The information was converted
             //from a csv file.
-            people.Add(new string[] { "Kris", "Marrier", "King, Christopher A Esq", "228 Runamuck Pl #2808", "Baltimore", "MD", "21224", "410-655-8723", "kris@gmail.com", "http://www.kingchristopheraesq.com", "/Content/img/personimg.jpg", "/Content/img/personimg.jpg", "<interests>" });
+            people.Add(new string[] { "Kris", "Marrier", "King, Christopher A Esq", "228 Runamuck Pl #2808", "Baltimore", "MD", "21224", "410-655-8723", "kris@gmail.com", "http://www.kingchristopheraesq.com", "/Content/img/personimg.jpg", "<interests>" });
             people.Add(new string[] { "Minna", "Amigon", "Dorl, James J Esq", "2371 Jerrold Ave", "Kulpsville", "PA", "19443", "215-874-1229", "minna_amigon@yahoo.com", "http://www.dorljamesjesq.com", "/Content/img/personimg.jpg", "<interests>" });
             people.Add(new string[] { "Abel", "Maclead", "Rangoni Of Florence", "37275 St  Rt 17m M", "Middle Island", "NY", "11953", "631-335-3414", "amaclead@gmail.com", "http://www.rangoniofflorence.com", "/Content/img/personimg.jpg", "<interests>" });
             people.Add(new string[] { "Kiley", "Caldarera", "Feiner Bros", "25 E 75th St #69", "Los Angeles", "CA", "90034", "310-498-5651", "kiley.caldarera@aol.com", "http://www.feinerbros.com", "/Content/img/personimg.jpg", "<interests>" });

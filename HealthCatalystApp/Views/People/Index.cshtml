@@ -54,6 +54,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            <img src="@Html.DisplayFor(modelItem => item.photo_path)" alt="person_img" class="img-circle img-responsive" /> 
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.first_name)
         </td>
         <td>
@@ -85,9 +88,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.interests)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.photo_path)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.person_id }) |
