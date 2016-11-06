@@ -4,33 +4,31 @@ using System;
 
 namespace HealthCatalystApp.Models
 {
-    public class PeopleModels
+    /// <summary>
+    /// Models information about people including:
+    /// first name, last name, address, city, state, zip
+    /// </summary>
+    public class People
     {
-        /// <summary>
-        /// Models information about people including:
-        /// first name, last name, address, city, state, zip
-        /// </summary>
-        public class People
-        {
-            [Key]
-            public int person_id { get; set; }
+        [Key]
+        public int person_id { get; set; }
 
-            [Required(ErrorMessage = "Your must provide a First Name")]
-            [Display(Name = "First Name")]
-            public string first_name { get; set; }
+        [Required(ErrorMessage = "Your must provide a First Name")]
+        [Display(Name = "First Name")]
+        public string first_name { get; set; }
 
-            [Required(ErrorMessage = "Your must provide a Last Name")]
-            [Display(Name = "Last Name")]
-            public string last_name { get; set; }
-            [Display(Name = "Company")]
-            public string company { get; set; }
+        [Required(ErrorMessage = "Your must provide a Last Name")]
+        [Display(Name = "Last Name")]
+        public string last_name { get; set; }
+        [Display(Name = "Company")]
+        public string company { get; set; }
 
-            [Required(ErrorMessage = "Your must provide an Address")]
-            [Display(Name = "Address")]
-            public string address { get; set; }
+        [Required(ErrorMessage = "Your must provide an Address")]    
+        [Display(Name = "Address")]
+        public string address { get; set; }
 
-            [Required(ErrorMessage = "Your must provide a City")]
-            [Display(Name = "City")]
+        [Required(ErrorMessage = "Your must provide a City")]
+        [Display(Name = "City")]
             public string city { get; set; }
 
             [Required(ErrorMessage = "Your must provide a State")]
@@ -63,10 +61,7 @@ namespace HealthCatalystApp.Models
             [Required(ErrorMessage = "Your must provide a File")]
             [Display(Name = "Photo File")]
             [DataType(DataType.ImageUrl)]
-            public string photo_path { get; set; }
+            public string photo_path { get; set; }   
 
-            
-
-        }
     }
 }

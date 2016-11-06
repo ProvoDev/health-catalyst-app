@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HealthCatalystApp.Models;
+using HealthCatalystApp.DAL;
 
 namespace HealthCatalystApp.Controllers
 {
     public class HomeController : Controller
     {
+        private PeopleContext db = new PeopleContext();
+
         public ActionResult Index()
         {
-            return View();
+
+            return View(db.People.ToList());
         }
 
         public ActionResult About()
