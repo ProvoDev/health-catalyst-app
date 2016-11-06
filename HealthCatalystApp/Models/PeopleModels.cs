@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System;
 
 namespace HealthCatalystApp.Models
 {
@@ -54,26 +55,18 @@ namespace HealthCatalystApp.Models
             [DataType(DataType.Url)]
             public string website { get; set; }
 
-            public virtual Photos photo { get; set; }
-        }
-
-        /// <summary>
-        /// Models information about people including:
-        /// 
-        /// </summary>
-        public class Photos
-        {
-            [Key]
-            public int photoId { get; set; }
+            [Required(ErrorMessage = "Your must provide a Interests")]
+            [Display(Name = "Interests")]
+            [DataType(DataType.MultilineText)]
+            public string interests { get; set; }
 
             [Required(ErrorMessage = "Your must provide a File")]
             [Display(Name = "Photo File")]
-            public string file_path { get; set; }
+            [DataType(DataType.ImageUrl)]
+            public string photo_path { get; set; }
 
-            [Display(Name = "Photo Description")]
-            public string description { get; set; }
+            
 
-            public virtual People people { get; set; }
         }
     }
 }
