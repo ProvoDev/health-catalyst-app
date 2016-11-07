@@ -43,6 +43,8 @@
         $.getJSON(actionUrl, displayData);
     });
 
+    $("#search_text").focus();
+
     function displayData(response) {
         if (response != null) {
             for (var i = 0; i < response.length; i++) {

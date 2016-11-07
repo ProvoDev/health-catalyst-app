@@ -17,6 +17,7 @@ namespace HealthCatalystApp.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //Removes pluralization of table names
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 

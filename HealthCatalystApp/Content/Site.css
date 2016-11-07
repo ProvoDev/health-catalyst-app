@@ -108,3 +108,11 @@ button{
 .btn{
     margin-top: 5px;
 }
+
+.nav > li > a{
+    color: #ffffff;
+}
+
+.nav > li > a:hover{
+    color: #000000;
+}

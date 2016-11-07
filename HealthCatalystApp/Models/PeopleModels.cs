@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
-using System;
 
 namespace HealthCatalystApp.Models
 {

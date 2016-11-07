@@ -1,33 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using HealthCatalystApp.Models;
 using HealthCatalystApp.DAL;
 
 namespace HealthCatalystApp.Controllers
 {
+    /// <summary>
+    /// Controrller that returns the home page,
+    /// along with the ajax call used to return search
+    /// results.
+    /// </summary>
     public class HomeController : Controller
     {
+        //variable to hold people database context
         private PeopleContext db = new PeopleContext();
 
+
+        //returns the view for the homepage
         public ActionResult Index()
         {
-
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }
