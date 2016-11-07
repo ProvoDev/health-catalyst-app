@@ -25,6 +25,10 @@ namespace HealthCatalystApp.Models
         [Display(Name = "Address")]
         public string address { get; set; }
 
+        [Required(ErrorMessage = "Your must provide an Age")]
+        [Display(Name = "Age")]
+        public int age { get; set; }
+
         [Required(ErrorMessage = "Your must provide a City")]
         [Display(Name = "City")]
             public string city { get; set; }
