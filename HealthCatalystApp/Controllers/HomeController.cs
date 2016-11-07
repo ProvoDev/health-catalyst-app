@@ -30,7 +30,7 @@ namespace HealthCatalystApp.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult SearchResults(string id)
+        public JsonResult SearchResults(string id)
         {
             var people = from m in db.People select m;
 

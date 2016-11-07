@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using HealthCatalystApp;
 using HealthCatalystApp.Controllers;
 
 namespace HealthCatalystApp.Tests.Controllers
@@ -12,6 +7,10 @@ namespace HealthCatalystApp.Tests.Controllers
     [TestClass]
     public class HomeControllerTest
     {
+        /// <summary>
+        /// Unit test to verify the index page returns
+        /// a view when called
+        /// </summary>
         [TestMethod]
         public void Index()
         {
@@ -25,30 +24,25 @@ namespace HealthCatalystApp.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
+        /// <summary>
+        /// Unit test to verify that the json call returns
+        /// some value for the given parameter "ma"
+        /// </summary>
         [TestMethod]
-        public void About()
+        public void SearchResult()
         {
             // Arrange
             HomeController controller = new HomeController();
 
-            // Act
-            ViewResult result = controller.About() as ViewResult;
+            // Atc
+            JsonResult result = controller.SearchResults("ma") as JsonResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.IsNotNull(result.Data);
+
+
         }
 
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-        }
     }
+
 }
