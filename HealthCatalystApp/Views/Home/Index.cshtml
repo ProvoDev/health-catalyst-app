@@ -46,7 +46,7 @@
     function displayData(response) {
         if (response != null) {
             for (var i = 0; i < response.length; i++) {
-                var listitem = '<a href="#" class="list-group-item list-group-item-action"><h4 class="list-group-item-heading">'+response[i].first_name+' '+ response[i].last_name + '</h4><p class="list-group-item-text"><span class="glyphicon glyphicon-envelope list-group-glyph"></span>  '+ response[i].email + '</p><p class="list-group-item-text"><span class="glyphicon glyphicon-phone-alt"></span>   ' + response[i].phone + '</p><p class="list-group-item-text"><span class="glyphicon glyphicon-map-marker"></span>  ' + response[i].address + ' ' + response[i].city + ', ' + response[i].state + ' ' + response[i].zip +'</p></a>';
+                var listitem = '<div class="col-lg-2"><img src="'+ response[i].photo_path +'" class="img-circle img-responsive search-img" /></div><div href="#" class="list-group-item list-group-item-action col-lg-10"><h4 class="list-group-item-heading">'+response[i].first_name+' '+ response[i].last_name + '</h4><p class="list-group-item-text"><span class="glyphicon glyphicon-envelope list-group-glyph"></span>  '+ response[i].email + '</p><p class="list-group-item-text"><span class="glyphicon glyphicon-phone-alt"></span>   ' + response[i].phone + '</p><p class="list-group-item-text"><span class="glyphicon glyphicon-map-marker"></span>  ' + response[i].address + ' ' + response[i].city + ', ' + response[i].state + ' ' + response[i].zip +'</p></div>';
                 $("#search_results").append(listitem);
             }
         }

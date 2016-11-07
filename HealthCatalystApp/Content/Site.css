@@ -90,3 +90,21 @@ button{
 /*.list-group-glyph {
     color: #ff9600;
 }*/
+
+.person-img{
+    max-width: 100px;
+}
+
+.search-img{
+    max-height: 100px;
+    margin: 0 auto;
+}
+
+.list-group-item{
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.btn{
+    margin-top: 5px;
+}
